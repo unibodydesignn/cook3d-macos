@@ -10,17 +10,17 @@ import MetalKit
 protocol Shader {
     var name: String { get }
     var functionName: String { get }
-    var function: MTLFunction { get }
+    var function: MTLFunction! { get }
 }
 
 public struct DefaultVertexShader: Shader {
     
     public var name: String = "Default Vertex Shader"
     public var functionName: String = "default_vertex_shader"
-    public var function: MTLFunction {
-        let function = ShaderLibrary.DefaultLibrary.makeFunction(name: functionName)
+    public var function: MTLFunction!
+    init() {
+        function = ShaderLibrary.DefaultLibrary.makeFunction(name: functionName)
         function!.label = "Default Vertex Shader"
-        return function!
     }
     
 }
@@ -28,10 +28,10 @@ public struct DefaultVertexShader: Shader {
 public struct DefaultFragmentShader: Shader {
     public var name: String = "Default Fragment Shader"
     public var functionName: String = "default_fragment_shader"
-    public var function: MTLFunction {
-        let function = ShaderLibrary.DefaultLibrary.makeFunction(name: functionName)
+    public var function: MTLFunction!
+    init() {
+        function = ShaderLibrary.DefaultLibrary.makeFunction(name: functionName)
         function!.label = "Default Fragment Shader"
-        return function!
     }
 }
 

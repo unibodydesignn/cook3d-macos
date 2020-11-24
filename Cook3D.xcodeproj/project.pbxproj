@@ -135,8 +135,8 @@
 				42E1D0F1256D81C400911681 /* CoreLibraries.swift */,
 				42E1D0F5256D820300911681 /* ShaderLibrary.swift */,
 				42E1D0F8256D841100911681 /* RenderPipelineDescriptorLibrary.swift */,
-				42E1D0FB256D852200911681 /* VertexDescriptorLibrary.swift */,
 				42E1D0FE256D85AF00911681 /* RenderPipelineStateLibrary.swift */,
+				42E1D0FB256D852200911681 /* VertexDescriptorLibrary.swift */,
 			);
 			path = CoreLibraries;
 			sourceTree = "<group>";

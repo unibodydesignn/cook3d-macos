@@ -33,18 +33,17 @@ class RenderPipelineStateLibrary {
 
 protocol RenderPipelineState {
     var name: String { get }
-    var renderPipelineState: MTLRenderPipelineState { get }
+    var renderPipelineState: MTLRenderPipelineState! { get }
 }
 
 public struct BasicRenderPipelineState: RenderPipelineState {
     var name: String = "Basic Render Pipeline State"
-    var renderPipelineState: MTLRenderPipelineState {
-        var renderPipelineState: MTLRenderPipelineState!
+    var renderPipelineState: MTLRenderPipelineState!
+    init() {
         do{
             renderPipelineState = try FusionCore.Device.makeRenderPipelineState(descriptor: RenderPipelineDescriptorLibrary.RenderPipelineDescriptor(.Basic))
         }catch let error as NSError {
             print("ERROR::CREATE::RENDER_PIPELINE_STATE::__\(name)__::\(error)")
         }
-        return renderPipelineState
     }
 }

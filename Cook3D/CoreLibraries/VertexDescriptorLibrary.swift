@@ -9,7 +9,7 @@ import MetalKit
 
 protocol VertexDescriptor {
     var name: String { get }
-    var vertexDescriptor: MTLVertexDescriptor { get }
+    var vertexDescriptor: MTLVertexDescriptor! { get }
 }
 
 class VertexDescriptorLibrary {
@@ -37,8 +37,9 @@ enum VertexDescriptorTypes {
 public struct Basic_VertexDescriptor: VertexDescriptor{
     var name: String = "Basic Vertex Descriptor"
     
-    var vertexDescriptor: MTLVertexDescriptor {
-        let vertexDescriptor = MTLVertexDescriptor()
+    var vertexDescriptor: MTLVertexDescriptor!
+    init() {
+        vertexDescriptor = MTLVertexDescriptor()
         
         //Position
         vertexDescriptor.attributes[0].format = .float3
@@ -52,6 +53,5 @@ public struct Basic_VertexDescriptor: VertexDescriptor{
         
         vertexDescriptor.layouts[0].stride = Vertex.stride
         
-        return vertexDescriptor
     }
 }

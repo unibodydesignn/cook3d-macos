@@ -10,21 +10,19 @@ import MetalKit
 protocol RenderPipelineDescriptor {
     
     var name: String { get }
-    var renderPipelineDescriptor: MTLRenderPipelineDescriptor { get }
+    var renderPipelineDescriptor: MTLRenderPipelineDescriptor! { get }
 }
 
 public struct BasicRenderPipelineDescriptor: RenderPipelineDescriptor {
     var name: String = "Basic Render Pipeline Descriptor"
-    var renderPipelineDescriptor: MTLRenderPipelineDescriptor {
-        
-        let renderPipelineDescriptor = MTLRenderPipelineDescriptor()
+    var renderPipelineDescriptor: MTLRenderPipelineDescriptor!
+    init() {
+        renderPipelineDescriptor = MTLRenderPipelineDescriptor()
         
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = Options.MainPixelFormat
         renderPipelineDescriptor.vertexFunction = ShaderLibrary.VertexFunction(.Default)
         renderPipelineDescriptor.fragmentFunction = ShaderLibrary.FragmentFunction(.Default)
         renderPipelineDescriptor.vertexDescriptor = VertexDescriptorLibrary.VertexDescriptor(.Basic)
-        
-        return renderPipelineDescriptor
     }
 }
 
