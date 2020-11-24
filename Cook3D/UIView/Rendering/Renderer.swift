@@ -19,6 +19,7 @@ extension Renderer: MTKViewDelegate {
         // Change aspect ration when windows size is changed!
     }
     
+    // Call this draw function 60 times at a second - 60 FPS
     func draw(in view: MTKView) {
         
         guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
