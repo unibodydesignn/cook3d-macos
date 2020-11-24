@@ -17,16 +17,7 @@ class FusionCore {
         self.Device = device
         self.DeviceCommandQueue = device.makeCommandQueue()
         
-        BuildLibraries()
-    }
-    
-    public static func BuildLibraries() {
-        
-        ShaderLibrary.Initialize()
-        VertexDescriptorLibrary.Initialize()
-        RenderPipelineDescriptorLibrary.Initialize()
-        RenderPipelineStateLibrary.Initialize()
-        
+        CoreLibraries.InitializeLibraries()
     }
     
 }
