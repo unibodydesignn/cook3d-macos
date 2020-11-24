@@ -11,6 +11,8 @@
 		428F54D8256C4D0200008835 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F54D7256C4D0200008835 /* ViewController.swift */; };
 		428F54DA256C4D0300008835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428F54D9256C4D0300008835 /* Assets.xcassets */; };
 		428F54DD256C4D0300008835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428F54DB256C4D0300008835 /* Main.storyboard */; };
+		42E1D0DC256D7B1B00911681 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D0DB256D7B1B00911681 /* MainView.swift */; };
+		42E1D0DF256D7B6A00911681 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D0DE256D7B6A00911681 /* shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		428F54DC256C4D0300008835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		428F54DE256C4D0300008835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428F54DF256C4D0300008835 /* Cook3D.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cook3D.entitlements; sourceTree = "<group>"; };
+		42E1D0DB256D7B1B00911681 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		42E1D0DE256D7B6A00911681 /* shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				428F54DB256C4D0300008835 /* Main.storyboard */,
 				428F54DE256C4D0300008835 /* Info.plist */,
 				428F54DF256C4D0300008835 /* Cook3D.entitlements */,
+				42E1D0DB256D7B1B00911681 /* MainView.swift */,
+				42E1D0DE256D7B6A00911681 /* shaders.metal */,
 			);
 			path = Cook3D;
 			sourceTree = "<group>";
@@ -132,7 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E1D0DF256D7B6A00911681 /* shaders.metal in Sources */,
 				428F54D8256C4D0200008835 /* ViewController.swift in Sources */,
+				42E1D0DC256D7B1B00911681 /* MainView.swift in Sources */,
 				428F54D6256C4D0200008835 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
