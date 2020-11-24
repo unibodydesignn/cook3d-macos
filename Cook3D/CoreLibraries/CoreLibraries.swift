@@ -15,6 +15,6 @@ class CoreLibraries {
         VertexDescriptorLibrary.InitializeLibrary()
         RenderPipelineDescriptorLibrary.InitializeLibrary()
         RenderPipelineStateLibrary.InitializeLibrary()
-        
+        MeshLibrary.InitializeLibrary()
     }
 }

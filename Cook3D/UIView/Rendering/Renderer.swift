@@ -9,13 +9,14 @@ import MetalKit
 
 class Renderer: NSObject {
     
-    var basicShape: BasicShape = BasicShape()
+    var basicShape: Shape = Shape(meshType: .Rectangle)
 }
 
 extension Renderer: MTKViewDelegate {
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         
+        // Change aspect ration when windows size is changed!
     }
     
     func draw(in view: MTKView) {
@@ -25,7 +26,7 @@ extension Renderer: MTKViewDelegate {
         let commandBuffer = FusionCore.DeviceCommandQueue.makeCommandBuffer()
         let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
         
-        basicShape.renderShape(renderCommandEncoder)
+        basicShape.doRender(renderCommandEncoder!)
         
         renderCommandEncoder?.endEncoding()
         commandBuffer?.present(drawable)

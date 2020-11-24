@@ -30,7 +30,7 @@ extension sizeable{
 
 extension float3: sizeable { }
 
-struct Vertex: sizeable{
+struct Vertex: sizeable {
     var position: float3
     var color: float4
 }

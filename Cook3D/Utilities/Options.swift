@@ -17,7 +17,7 @@ public enum ClearColors {
 
 class Options {
     
-    public static var ClearColor: MTLClearColor = ClearColors.White
+    public static var ClearColor: MTLClearColor = ClearColors.Grey
     public static var MainPixelFormat: MTLPixelFormat = MTLPixelFormat.bgra8Unorm
     
 }

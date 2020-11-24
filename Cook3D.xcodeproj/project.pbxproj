@@ -22,7 +22,11 @@
 		42E1D0FC256D852200911681 /* VertexDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D0FB256D852200911681 /* VertexDescriptorLibrary.swift */; };
 		42E1D0FF256D85AF00911681 /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D0FE256D85AF00911681 /* RenderPipelineStateLibrary.swift */; };
 		42E1D104256D8B7B00911681 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D103256D8B7B00911681 /* Renderer.swift */; };
-		42E1D109256D8CEE00911681 /* BasicShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D108256D8CEE00911681 /* BasicShape.swift */; };
+		42E1D109256D8CEE00911681 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D108256D8CEE00911681 /* Shape.swift */; };
+		42E1D10D256D8F1800911681 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D10C256D8F1800911681 /* Mesh.swift */; };
+		42E1D110256D90DC00911681 /* MeshLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D10F256D90DC00911681 /* MeshLibrary.swift */; };
+		42E1D114256D94F700911681 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D113256D94F700911681 /* Node.swift */; };
+		42E1D118256D953100911681 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E1D117256D953100911681 /* Renderable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +48,11 @@
 		42E1D0FB256D852200911681 /* VertexDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorLibrary.swift; sourceTree = "<group>"; };
 		42E1D0FE256D85AF00911681 /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
 		42E1D103256D8B7B00911681 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		42E1D108256D8CEE00911681 /* BasicShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicShape.swift; sourceTree = "<group>"; };
+		42E1D108256D8CEE00911681 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		42E1D10C256D8F1800911681 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		42E1D10F256D90DC00911681 /* MeshLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshLibrary.swift; sourceTree = "<group>"; };
+		42E1D113256D94F700911681 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		42E1D117256D953100911681 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,7 @@
 				42E1D0F8256D841100911681 /* RenderPipelineDescriptorLibrary.swift */,
 				42E1D0FE256D85AF00911681 /* RenderPipelineStateLibrary.swift */,
 				42E1D0FB256D852200911681 /* VertexDescriptorLibrary.swift */,
+				42E1D10F256D90DC00911681 /* MeshLibrary.swift */,
 			);
 			path = CoreLibraries;
 			sourceTree = "<group>";
@@ -158,9 +167,20 @@
 		42E1D107256D8CD100911681 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				42E1D108256D8CEE00911681 /* BasicShape.swift */,
+				42E1D116256D94FC00911681 /* Protocols */,
+				42E1D108256D8CEE00911681 /* Shape.swift */,
+				42E1D10C256D8F1800911681 /* Mesh.swift */,
+				42E1D113256D94F700911681 /* Node.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		42E1D116256D94FC00911681 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				42E1D117256D953100911681 /* Renderable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,16 +255,20 @@
 				42E1D0F9256D841100911681 /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				42E1D0DF256D7B6A00911681 /* shaders.metal in Sources */,
 				42E1D0F6256D820300911681 /* ShaderLibrary.swift in Sources */,
+				42E1D118256D953100911681 /* Renderable.swift in Sources */,
 				428F54D8256C4D0200008835 /* ViewController.swift in Sources */,
 				42E1D0FC256D852200911681 /* VertexDescriptorLibrary.swift in Sources */,
 				42E1D104256D8B7B00911681 /* Renderer.swift in Sources */,
 				42E1D0E9256D805600911681 /* FusionCore.swift in Sources */,
 				42E1D0FF256D85AF00911681 /* RenderPipelineStateLibrary.swift in Sources */,
 				42E1D0DC256D7B1B00911681 /* MainView.swift in Sources */,
+				42E1D10D256D8F1800911681 /* Mesh.swift in Sources */,
+				42E1D114256D94F700911681 /* Node.swift in Sources */,
 				42E1D0E2256D7F3C00911681 /* Types.swift in Sources */,
 				428F54D6256C4D0200008835 /* AppDelegate.swift in Sources */,
 				42E1D0ED256D814800911681 /* Options.swift in Sources */,
-				42E1D109256D8CEE00911681 /* BasicShape.swift in Sources */,
+				42E1D109256D8CEE00911681 /* Shape.swift in Sources */,
+				42E1D110256D90DC00911681 /* MeshLibrary.swift in Sources */,
 				42E1D0F2256D81C400911681 /* CoreLibraries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
